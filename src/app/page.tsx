@@ -1,10 +1,20 @@
 'use client'
 import type { NextPage } from 'next';
 import { useRouter } from 'next/navigation';
+import React, { useState } from 'react';
+
+
 
 const Ebook: NextPage = () => {
   const router = useRouter();
 
+  const [playing, setPlaying] = useState(false);
+
+  const videoSrc = "https://www.youtube.com/embed/dQw4w9WgXcQ?si=vBkTCV06cuO2WZ0R"; // Ensure autoplay is on for seamless play
+
+  const startVideo = () => {
+    setPlaying(true);
+  };
 
   return (
     <div>
@@ -21,19 +31,26 @@ const Ebook: NextPage = () => {
           </p>
           
           {/* Video Embed */}
-          <div className="w-full max-w-4xl p-4 mb-4">
+          <div className="video-container" style={{ position: 'relative', width: '50%', height: '55%' }}>
+            { !playing && (
+              <img 
+                src="thumb.png" 
+                alt="Play" 
+                style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, cursor: 'pointer' }}
+                onClick={startVideo}
+              />
+            )}
             <iframe
-              className="w-full aspect-video"
-              src='https://www.youtube.com/embed/dQw4w9WgXcQ?si=vBkTCV06cuO2WZ0R'
-              title="YouTube video player"
+              src={playing ? videoSrc : undefined} 
               frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowFullScreen
+              style={{ width: '100%', height: '100%' }}
             ></iframe>
           </div>
           <button
             onClick={() => router.push('/orcamento')}
-            className="bg-green-500 hover:bg-green-700 text-white poppins-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-green-500 hover:bg-green-700 text-white poppins-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-8"
           >
             Faça seu orçamento
           </button>
