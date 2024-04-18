@@ -13,7 +13,7 @@ const Orcamento: React.FC = () => {
   };
 
   return (
-    <div className="relative w-full overflow-hidden" style={{ background: 'linear-gradient(to bottom, #000000, #791212)', minHeight: '100vh' }}>
+    <div className="relative w-full overflow-hidden" style={{ background: 'linear-gradient(to bottom, #000000 85%, #791212 100%)', minHeight: '100vh' }}>
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center min-h-screen">
         <form onSubmit={handleSubmit} className="bg-black bg-opacity-50 p-8 rounded shadow-lg" style={{ width: '80%', maxWidth: '800px' }}>
           <div className="flex justify-center mb-6">
