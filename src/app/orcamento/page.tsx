@@ -18,9 +18,10 @@ const Orcamento: React.FC = () => {
         <form onSubmit={handleSubmit} className="bg-black bg-opacity-50 p-8 rounded shadow-lg" style={{ width: '80%', maxWidth: '800px' }}>
           <div className="flex justify-center mb-6">
             <img 
+              onClick={() => router.push('/')}
               src="image.png" 
               alt="Inteli Jr" 
-              className="w-32 sm:w-64" // Responsive width adjustments
+              className="w-32 sm:w-64 cursor-pointer" // Responsive width adjustments
             />
           </div>
           <h1 className="text-xl font-bold text-white poppins-semibold mb-4">Orçamento de Projetos</h1>

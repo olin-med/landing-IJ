@@ -24,7 +24,7 @@ const Ebook: NextPage = () => {
           <img 
             src="image.png" 
             alt="Inteli Jr" 
-            className="w-32 sm:w-64" // Responsive width adjustments
+            className="w-32 sm:w-64 cursor-pointer" // Responsive width adjustments
           />
           <p className="text-sm sm:text-lg text-center text-white fira-sans-bold-italic cursor-default sm:p-8">
             Porque escolher o Inteli Júnior para fazer seu site?
