@@ -35,7 +35,7 @@ const Orcamento: React.FC = () => {
             </div>
           </div>
 
-          <label htmlFor="description" className="block mb-2 poppins-regular text-white">Project Description:</label>
+          <label htmlFor="description" className="block mb-2 poppins-regular text-white">Descrição do Projeto:</label>
           <textarea id="description" name="description" placeholder='Descreva aqui o seu projeto. Descreva suas necessidades e especifique quais funcionalidades você gostaria de ter.' rows={4} required className="w-full p-2 mb-4 border rounded"></textarea>
 
           <label htmlFor="links" className="block mb-2 poppins-regular text-white">Links:</label>
